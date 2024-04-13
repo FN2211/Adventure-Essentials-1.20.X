@@ -1,6 +1,13 @@
 package net.adventurestudio.adventureessentials;
 
 import com.mojang.logging.LogUtils;
+import net.adventurestudio.adventureessentials.block.ModBlocks;
+import net.adventurestudio.adventureessentials.item.ModCreativeModeTabs;
+import net.adventurestudio.adventureessentials.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -22,6 +29,11 @@ public class AdventureEssentials {
     public AdventureEssentials() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -34,7 +46,9 @@ public class AdventureEssentials {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.KANISTER);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
