@@ -17,7 +17,7 @@ import org.slf4j.Logger;
 @Mod(AdventureEssentials.MOD_ID)
 public class AdventureEssentials {
     public static final String MOD_ID = "adventure_essentials";
-    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger(); s
 
     public AdventureEssentials() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
