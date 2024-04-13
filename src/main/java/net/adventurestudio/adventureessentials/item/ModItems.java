@@ -11,7 +11,10 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AdventureEssentials.MOD_ID);
 
-    public static final RegistryObject<Item> KANISTER = ITEMS.register("kanister",
+    public static final RegistryObject<Item> EMPTY_KANISTER = ITEMS.register("empty_kanister",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FULL_KANISTER = ITEMS.register("full_kanister",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

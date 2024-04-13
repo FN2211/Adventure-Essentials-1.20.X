@@ -15,12 +15,13 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AdventureEssentials.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> ADVENTURE2_TAB = CREATIVE_MODE_TABS.register("adventure2_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.KANISTER.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.EMPTY_KANISTER.get()))
                     .title(Component.translatable("creativetab.adventure2_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
 
-                        output.accept(ModItems.KANISTER.get());
+                        output.accept(ModItems.EMPTY_KANISTER.get());
+                        output.accept(ModItems.FULL_KANISTER.get());
                         output.accept(ModBlocks.FUEL_BARREL.get());
 
 
