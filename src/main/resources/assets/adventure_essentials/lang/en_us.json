@@ -1,8 +1,10 @@
 {
   "item.adventure_essentials.empty_kanister": "Empty Canister",
+  "item.adventure_essentials.full_kanister": "Full Canister",
 
 
   "block.adventure_essentials.fuel_barrel": "Fuel Barrel",
+  "block.adventure_essentials.generator_block": "Generator",
 
 
   "creativetab.adventure2_tab": "Adventure 2 Stuff"

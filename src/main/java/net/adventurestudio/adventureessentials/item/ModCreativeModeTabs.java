@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.EMPTY_KANISTER.get());
                         output.accept(ModItems.FULL_KANISTER.get());
                         output.accept(ModBlocks.FUEL_BARREL.get());
+                        output.accept(ModBlocks.GENERATOR_BLOCK.get());
 
 
                     })

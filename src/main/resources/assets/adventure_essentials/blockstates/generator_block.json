@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "adventure_essentials:block/generator_block"
+    }
+  }
+}

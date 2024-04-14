@@ -23,7 +23,10 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> FUEL_BARREL = registerBlock("fuel_barrel",
-            () -> new FuelBarrel(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission()));
+            () -> new FuelBarrel(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> GENERATOR_BLOCK = registerBlock("generator_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

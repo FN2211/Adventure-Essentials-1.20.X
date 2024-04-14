@@ -1,8 +1,10 @@
 {
   "item.adventure_essentials.empty_kanister": "Leerer Kanister",
+  "item.adventure_essentials.full_kanister": "Voller Kanister",
 
 
   "block.adventure_essentials.fuel_barrel": "Treibstoff Fass",
+  "block.adventure_essentials.generator_block": "Generator",
 
 
   "creativetab.adventure2_tab": "Adventure 2 Zeug"
